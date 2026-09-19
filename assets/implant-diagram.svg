@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="abutmentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="35%" stop-color="#f8fafc"/>
+      <stop offset="70%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="implantGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0077b6"/>
+      <stop offset="30%" stop-color="#00b4d8"/>
+      <stop offset="65%" stop-color="#90e0ef"/>
+      <stop offset="100%" stop-color="#023e8a"/>
+    </linearGradient>
+    <linearGradient id="boneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="gumGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#fb7185" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Soft Aura -->
+  <circle cx="200" cy="240" r="160" fill="url(#implantGrad)" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Gum Line Tissue Layer -->
+  <path d="M 40,210 Q 120,185 200,215 Q 280,185 360,210 L 360,240 L 40,240 Z" fill="url(#gumGrad)"/>
+
+  <!-- Jawbone Structure Layer -->
+  <rect x="50" y="240" width="300" height="210" rx="16" fill="url(#boneGrad)" stroke="#f97316" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+  <!-- Trabecular bone pores dots -->
+  <circle cx="90" cy="270" r="3" fill="#ea580c" opacity="0.3"/>
+  <circle cx="130" cy="330" r="4" fill="#ea580c" opacity="0.3"/>
+  <circle cx="300" cy="300" r="3.5" fill="#ea580c" opacity="0.3"/>
+  <circle cx="280" cy="380" r="4" fill="#ea580c" opacity="0.3"/>
+  <circle cx="100" cy="400" r="3" fill="#ea580c" opacity="0.3"/>
+
+  <!-- 1. The Implant Fixture (Screw) -->
+  <g id="implant-screw">
+    <!-- Root shape -->
+    <path d="M 165,220 L 235,220 L 225,410 Q 200,425 175,410 Z" fill="url(#implantGrad)" stroke="#0077b6" stroke-width="1.5"/>
+    <!-- Precision Micro-threads -->
+    <path d="M 164,240 Q 200,252 236,240" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M 163,265 Q 200,277 237,265" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M 162,290 Q 200,302 238,290" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M 163,315 Q 200,327 237,315" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M 165,340 Q 200,352 235,340" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M 168,365 Q 200,377 232,365" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M 172,390 Q 200,400 228,390" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- 2. The Abutment (Connector) -->
+  <g id="abutment">
+    <path d="M 175,170 L 225,170 L 232,220 L 168,220 Z" fill="url(#abutmentGrad)" stroke="#64748b" stroke-width="1.5"/>
+    <rect x="180" y="160" width="40" height="12" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="200" cy="195" r="4" fill="#00b4d8"/>
+  </g>
+
+  <!-- 3. The Ceramic / Zirconia Crown -->
+  <g id="crown">
+    <path d="M 140,75 
+             C 140,35 170,25 200,25 
+             C 230,25 260,35 260,75 
+             C 265,115 255,165 240,175 
+             C 215,182 185,182 160,175 
+             C 145,165 135,115 140,75 Z" 
+          fill="url(#crownGrad)" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Crown Natural Enamel Luster -->
+    <path d="M 160,50 Q 170,40 185,42 Q 175,80 170,120" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <path d="M 230,55 Q 225,75 228,110" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <!-- Tooth Cusp Anatomical Grooves -->
+    <path d="M 185,32 Q 200,45 215,32" stroke="#94a3b8" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Annotations / Pointers with Arabic Labels -->
+  <!-- 1. Crown Label -->
+  <g transform="translate(10, 65)">
+    <line x1="125" y1="20" x2="60" y2="20" stroke="#00b4d8" stroke-width="1.5"/>
+    <circle cx="125" cy="20" r="3.5" fill="#00b4d8"/>
+    <rect x="0" y="5" width="65" height="28" rx="6" fill="#0b132b" stroke="#00b4d8" stroke-width="1"/>
+    <text x="32" y="24" fill="#ffffff" font-family="Cairo, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">التاج الخزفي</text>
+  </g>
+
+  <!-- 2. Abutment Label -->
+  <g transform="translate(305, 175)">
+    <line x1="0" y1="20" x2="65" y2="20" stroke="#d4af37" stroke-width="1.5"/>
+    <circle cx="0" cy="20" r="3.5" fill="#d4af37"/>
+    <rect x="25" y="5" width="65" height="28" rx="6" fill="#0b132b" stroke="#d4af37" stroke-width="1"/>
+    <text x="57" y="24" fill="#ffffff" font-family="Cairo, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">الدعامة</text>
+  </g>
+
+  <!-- 3. Implant Screw Label -->
+  <g transform="translate(10, 310)">
+    <line x1="150" y1="20" x2="65" y2="20" stroke="#00b4d8" stroke-width="1.5"/>
+    <circle cx="150" cy="20" r="3.5" fill="#00b4d8"/>
+    <rect x="0" y="5" width="75" height="28" rx="6" fill="#0b132b" stroke="#00b4d8" stroke-width="1"/>
+    <text x="37" y="24" fill="#ffffff" font-family="Cairo, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">غرسة التيتانيوم</text>
+  </g>
+
+  <!-- 4. Jawbone Osseointegration Label -->
+  <g transform="translate(305, 345)">
+    <line x1="0" y1="20" x2="65" y2="20" stroke="#f97316" stroke-width="1.5"/>
+    <circle cx="0" cy="20" r="3.5" fill="#f97316"/>
+    <rect x="25" y="5" width="65" height="28" rx="6" fill="#0b132b" stroke="#f97316" stroke-width="1"/>
+    <text x="57" y="24" fill="#ffffff" font-family="Cairo, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">عظم الفك</text>
+  </g>
+</svg>

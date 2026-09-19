@@ -1,0 +1,17 @@
+{
+  "name": "dr-khaled-eldeeb-dental-landing-page",
+  "version": "1.0.0",
+  "description": "Premium Dental Implant Landing Page for Dr. Khaled Eldeeb",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "dental",
+    "implant",
+    "landing-page",
+    "dr-khaled-eldeeb"
+  ],
+  "author": "Dr. Khaled Eldeeb Clinic",
+  "license": "ISC"
+}

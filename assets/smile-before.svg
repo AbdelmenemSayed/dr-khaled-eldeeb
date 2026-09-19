@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGradBefore" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0b132b"/>
+    </radialGradient>
+    <linearGradient id="lipGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="60%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <linearGradient id="toothNormal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="gumLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradBefore)"/>
+
+  <!-- Clinical Grid subtle lines -->
+  <line x1="100" y1="250" x2="700" y2="250" stroke="#334155" stroke-dasharray="4,6" opacity="0.4"/>
+  <line x1="400" y1="100" x2="400" y2="400" stroke="#334155" stroke-dasharray="4,6" opacity="0.4"/>
+
+  <!-- Dental Arch Container -->
+  <g transform="translate(0, 30)">
+    <!-- Oral Cavity Dark Background -->
+    <path d="M 220,240 Q 400,290 580,240 Q 400,380 220,240 Z" fill="#030712"/>
+
+    <!-- Upper Gum Scallop -->
+    <path d="M 230,235 Q 260,205 290,230 Q 325,200 365,225 Q 400,195 435,225 Q 475,200 510,230 Q 545,210 570,235 Z" fill="url(#gumLine)"/>
+
+    <!-- Teeth Row Upper (BEFORE: Missing Left Lateral/Premolar Gap) -->
+    <!-- Right Molar/Premolars -->
+    <path d="M 235,235 Q 245,285 265,280 Q 275,235 265,235 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+    <path d="M 270,235 Q 285,295 305,290 Q 315,235 305,235 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+    <!-- Canine Right -->
+    <path d="M 310,230 Q 330,310 345,305 Q 355,230 345,228 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+    <!-- Central Incisor Right -->
+    <path d="M 350,225 Q 355,325 395,325 Q 398,225 390,222 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+    
+    <!-- Central Incisor Left -->
+    <path d="M 405,222 Q 402,325 445,325 Q 450,225 442,225 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+
+    <!-- *** MISSING TOOTH GAP AT 455 to 500 *** -->
+    <!-- Recessed dark gap with receded gum outline -->
+    <path d="M 452,228 Q 478,255 502,228 Z" fill="#9f1239" opacity="0.7"/>
+    <ellipse cx="478" cy="265" rx="16" ry="24" fill="#000000" opacity="0.95"/>
+    <text x="478" y="270" fill="#f87171" font-family="Cairo, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">فراغ سن مفقود</text>
+    
+    <!-- Left Premolar / Molar -->
+    <path d="M 508,230 Q 525,290 545,285 Q 550,235 540,230 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+    <path d="M 548,235 Q 560,280 575,275 Q 580,235 570,235 Z" fill="url(#toothNormal)" filter="url(#shadow)"/>
+
+    <!-- Natural Smile Highlights on Teeth -->
+    <path d="M 365,245 L 368,300" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 425,245 L 428,300" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Lower Lip Smile Line -->
+    <path d="M 210,240 C 260,330 330,370 400,370 C 470,370 540,330 590,240 C 530,340 470,355 400,355 C 330,355 270,340 210,240 Z" fill="url(#lipGrad)" filter="url(#shadow)"/>
+    
+    <!-- Upper Lip Contour -->
+    <path d="M 210,240 C 270,200 340,185 400,200 C 460,185 530,200 590,240 C 530,215 460,205 400,215 C 340,205 270,215 210,240 Z" fill="url(#lipGrad)"/>
+  </g>
+
+  <!-- Clinical Assessment Info Box -->
+  <g transform="translate(50, 410)">
+    <rect width="260" height="50" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="#ef4444" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="8" fill="#ef4444"/>
+    <text x="50" y="24" fill="#ffffff" font-family="Cairo, sans-serif" font-size="13" font-weight="bold">قبل الزراعة:</text>
+    <text x="50" y="42" fill="#cbd5e1" font-family="Cairo, sans-serif" font-size="11">فقدان سن أمامي وصعوبة في المضغ</text>
+  </g>
+</svg>
