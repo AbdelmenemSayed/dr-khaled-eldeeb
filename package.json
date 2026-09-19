@@ -4,7 +4,7 @@
   "description": "Premium Dental Implant Landing Page for Dr. Khaled Eldeeb",
   "main": "index.html",
   "scripts": {
-    "start": "node server.js"
+    "start": "node local-server.js"
   },
   "keywords": [
     "dental",
